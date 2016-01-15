@@ -36,3 +36,7 @@ function countOfCars(original) {
 var alltheCars = new Array("Audi", "Audi", "Jaguar", "Outback", "Outback", "Civic", "Civic", "Civic", "Audi");
 var listtheCount = countOfCars(alltheCars);
 console.log(listtheCount)
+
+// As you are already using jQuery, you can use the grep function which is intended for searching an array:
+
+// var result = $.grep(myArray, function(e){ return e.id == id; });

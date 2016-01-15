@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anuja Verma - CheatSheet - CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="stylesheets/default.css">
+  </head>
+
+  <body>
+    <header>
+      <div class="nav-bar">
+          <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../blogs.html">Blogs</a></li>
+            <li><a href="../../techcheatsheets.html">Technical Cheat Sheets</a></li>
+          </ul>
+        </div>
+     </header>
+     <div class="content-section">
+      <section class="container">
+
+        <h2 class="title">CSS CheatSheet</h2>
+        <h4 class="date">12/09/2015</h4>
+
+        <h3>Understanding Hex Colors</h3>
+
+        <b>#FFFF00</b>
+        <p>Here the first two digits 'FF' determine the amount of red, next two determine the amount of green and last two digits determine the amount of blue.</p>
+
+        <p>Hexadecimal numbers run from 0-15, but use letters for numbers above 9.</p>
+        <ul>
+          <li>A = 10</li>
+          <li>B = 11</li>
+          <li>C = 12</li>
+          <li>D = 13</li>
+          <li>E = 14</li>
+          <li>F = 15</li>
+        </ul>
+
+        <p>Block-Level Tags - The content of block-level tags take up the entire width of the container.</p>
+        <p>Inline-Level tags - They do not take all the width of the container but just flow with the content.</p>
+
+
+        <h3>The Box Model</h3>
+
+
+        <p>The Box Model is a way to describe the borders and spacing in between the boxes of each tag.</p>
+        <p>There are 4 parts of the box Model:</p>
+        <ul>
+          <li>Content Area</li>
+           The content area contains the actual content(text, image, etc)
+          <li>Padding</li>
+          Padding is added to the top, right, bottom or left of the content area.
+          <li>Border</li>
+          Borders are added around the top, right, bottom or left of the padding.
+          <li>Margins</li>
+          Margins are added to the top, right, bottom or left of the border.
+        </ul>
+        <p>The full size of a box after these four properties have been set can be calculated as shown below:</p>
+        the full box width = content area width + padding-left + padding-right + border-left + border-right + margin-left + margin-right
+
+        <h4>Padding Setting</h4>
+        <div>
+          We can adjust padding doing the following style settings:
+          <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">h2</span>
+          <span style="color: #cccccc">{</span>
+          <span style="color: #cdcd00">padding-top</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">padding-right</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">padding-bottom</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">padding-left</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cccccc">}</span>
+          </pre></div>
+
+        </div>
+         or they can be done in a single line as follows:
+
+        <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">h2</span>
+        <span style="color: #cccccc">{</span>
+        <span style="color: #cdcd00">padding</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span> <span style="color: #cd00cd">6px</span> <span style="color: #cd00cd">6px</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+        <span style="color: #cccccc">}</span>
+        </pre></div>
+        <p>Padding is used to control the size of a box without adjusting the size of the content inside the box.</p>
+        <h4>Border Setting</h4>
+        <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">h2</span>
+        <span style="color: #cccccc">{</span>
+        <span style="color: #cdcd00">border-width</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+        <span style="color: #cdcd00">border-style</span><span style="color: #3399cc">:</span> <span style="color: #cdcd00">solid</span><span style="color: #cccccc">;</span>
+        <span style="color: #cdcd00">border-color</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">black</span><span style="color: #cccccc">;</span>
+        <span style="color: #cccccc">}</span>
+        </pre></div>
+        <p>To add border just one side, use border-top, border-right, border-bottom, border-left</p>
+
+        <h4>Margin Setting</h4>
+        <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">h2</span> <span style="color: #cccccc">{</span>
+          <span style="color: #cdcd00">margin-top</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">margin-right</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">margin-bottom</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">margin-left</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">6px</span><span style="color: #cccccc">;</span>
+        <span style="color: #cccccc">}</span>
+        </pre></div>
+        <p>Margin is used to control the space between boxes.</p>
+
+<h3> Floats coming soon! </h3>
+
+
+<h3>Quick Notes</h3>
+<ol>
+          <li><p>To get space between the lines of a paragraph adjust line-height property.<p></li>
+          <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">p</span> <span style="color: #cccccc">{</span>
+          <span style="color: #cdcd00">color</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">#444444</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">margin</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">0</span> <span style="color: #cd00cd">0</span> <span style="color: #cd00cd">10px</span> <span style="color: #cd00cd">0</span><span style="color: #cccccc">;</span>
+          <span style="color: #cdcd00">line-height</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">24px</span><span style="color: #cccccc">;</span>
+          <span style="color: #cccccc">}</span>
+          </pre></div>
+
+            <li><p>To select a tag with its attribute:</p></li>
+
+            <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #3399cc">&lt;</span><span style="color: #cccccc">form</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">label</span> <span style="color: #cccccc">for</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;band-name&quot;</span><span style="color: #3399cc">&gt;</span><span style="color: #cccccc">Band</span> <span style="color: #cccccc">Name</span><span style="color: #3399cc">&lt;/</span><span style="color: #cccccc">label</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">input</span> <span style="color: #cccccc">type</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;text&quot;</span> <span style="color: #cccccc">id</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;band-name&quot;</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">label</span> <span style="color: #cccccc">for</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;your-story&quot;</span><span style="color: #3399cc">&gt;</span><span style="color: #cccccc">Your</span> <span style="color: #cccccc">Story</span><span style="color: #3399cc">&lt;/</span><span style="color: #cccccc">label</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">textarea</span> <span style="color: #cccccc">id</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;your-story&quot;</span><span style="color: #3399cc">&gt;&lt;/</span><span style="color: #cccccc">textarea</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">label</span> <span style="color: #cccccc">for</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;on-tour&quot;</span><span style="color: #3399cc">&gt;</span><span style="color: #cccccc">On</span> <span style="color: #cccccc">Tour</span><span style="color: #3399cc">&lt;/</span><span style="color: #cccccc">label</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">input</span> <span style="color: #cccccc">type</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;checkbox&quot;</span> <span style="color: #cccccc">id</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;on-tour&quot;</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;</span><span style="color: #cccccc">input</span> <span style="color: #cccccc">type</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;submit&quot;</span> <span style="color: #cccccc">value</span><span style="color: #3399cc">=</span><span style="color: #cd0000">&quot;Tell us about your band&quot;</span><span style="color: #3399cc">&gt;</span>
+            <span style="color: #3399cc">&lt;/</span><span style="color: #cccccc">form</span><span style="color: #3399cc">&gt;</span>
+            </pre></div>
+
+            use the following CSS:
+
+            </p>
+            <!-- HTML generated using hilite.me --><div style="background: #000000; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cccccc">input</span><span style="color: #3399cc">[</span><span style="color: #cccccc">type</span><span style="color: #3399cc">=</span><span style="color: #cccccc">submit</span><span style="color: #3399cc">]</span><span style="color: #cccccc">{</span>
+            <span style="color: #cdcd00">width</span><span style="color: #3399cc">:</span> <span style="color: #cd00cd">165px</span><span style="color: #cccccc">;</span>
+            <span style="color: #cccccc">}</span>
+            <span style="color: #cccccc">input</span><span style="color: #3399cc">[</span><span style="color: #cccccc">type</span><span style="color: #3399cc">=</span><span style="color: #cccccc">checkbox</span><span style="color: #3399cc">]</span><span style="color: #cccccc">{</span>
+            <span style="color: #cdcd00">display</span><span style="color: #3399cc">:</span> <span style="color: #cdcd00">inline</span><span style="color: #cccccc">;</span>
+            <span style="color: #cccccc">}</span>
+            <span style="color: #cccccc">label</span><span style="color: #3399cc">[</span><span style="color: #cccccc">for</span><span style="color: #3399cc">=</span><span style="color: #cccccc">on-tour</span><span style="color: #3399cc">]</span> <span style="color: #cccccc">{</span>
+            <span style="color: #cdcd00">display</span><span style="color: #3399cc">:</span> <span style="color: #cdcd00">inline</span><span style="color: #cccccc">;</span>
+            <span style="color: #cccccc">}</span>
+            </pre></div>
+
+
+          </ol>
+      </section>
+      <div class="footer">
+
+      </div>
+    </div>
+  </body>
+</html>

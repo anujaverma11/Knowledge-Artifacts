@@ -5,8 +5,10 @@ I asked this question to myself when I started writing this blog. The answer rel
 
 The idea of writing this page came with a very selfish purpose i.e. not to tell the world how to manage time but to keep a self-check. During the process when I was about to start bootcamp days, I worked a lot on gathering a lot of information of how I can do justice to my studies; that involves a lot of Time Management. And now when I have a choice to go back to my normal life this need to complete multiple challenges in a day (which now includes technical and everything else) does not suffice. Hence, the idea to write this article. The plan is that this article will be a living document to capture my learning about time management, time and again.
 
-To do any activity successfully it requires time, mindfulness and wholeself. Over the period of time I have gethered the following resources to help myself bring the trio together and achieve my target purpose.
+To do any activity successfully it requires time management, mindfulness and wholeself.Over the period of time I have gethered a number of resources to help myself bring the trio together and achieve my target purpose.
 
 ### Meditation
 I was introduced to meditation as part of a
 
+
+### Mindfulness

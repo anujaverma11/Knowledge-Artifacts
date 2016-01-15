@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anuja Verma - Prototypes</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+
+
+      <header>
+        <div class="nav-bar">
+           <ul>
+              <li><a href="../../index.html">Home</a></li>
+              <li><a href="../../blogs.html">Blogs</a></li>
+              <li><a href="../../techcheatsheets.html">Technical Cheat Sheets</a></li>
+            </ul>
+          </div>
+      </header>
+  </head>
+
+  <body>
+    <div class="outer">
+      <section class="container">
+
+        <h2 class="title">Javascript Prototypes</h2>
+        <h4 class="date">12/19/2015</h4>
+
+        <h3>Properties of Object Literals</h3>
+        <p>A prototype is like a blueprint Object for the Object we are trying to create.
+          Any Object created will inherit properties from parent Object prototype. Though the proprties are inherited, they are still "owned" by prototypes, not the inheriting object.</p>
+        <ul>
+          <li>valueOF</li>
+          <li>constructor</li>
+          <li>toLocaleString</li>
+          <li>toString</li>
+          <li>isPrototypeOf</li>
+          <li>propertyISEnumerable</li>
+          <li>hasOwnProperty</li>
+        </ul>
+
+        <h3>Inheritence and Constructors</h3>
+        <p>Using Inheritance, we can create new objects with our existing Objects as prototypes.</p>
+        <p>Lets create  an object shoe:</p>
+        <p style="text-indent: 5em;">var shoe = {size:6, gender: "women", construction: "slipper"};</p>
+        Now we can create new objects using 'shoe' as a prototype.
+        <p style="text-indent: 5em;">var magicShoe = Object.create(shoe);</p>
+        <p>The new Object magicShoe inherited all of its properties from shoe.</p>
+
+        <p>To find out if any specific object is a protoype of another:</p>
+        <p style="text-indent: 5em;">Object.prototype.isPrototypeOf(shoe); //true</p>
+        <p style="text-indent: 5em;">shoe.isPrototypeOf(magicShoe); //true</p>
+        <p style="text-indent: 5em;">Object.prototype.isPrototypeOf(magicShoe); //will also give true</p>
+        The isPrototypeOf method will look upward through the entire hierarchy(the prototype chain) to see whether the Object.prototype Object is a prototypical "ancestor" of magicShoe.
+
+        <h4>Constructors</h4>
+        <p>A constructor is useful when you want to create multiple similar objects with the same properties and methods. It’s a convention to capitalize the name of constructors to distinguish them from regular functions. Capitalizing the function's name distinguishes it as a maker of an entire "Class" of Objects: a constructor. The constructor function will construct a new instance of a function and assign the values(passed as parameters) to it.</p>
+        <p>The 'this' keyword inside a constructor will automatically refer to the new instance of the class that is being made.</p>
+
+<!-- HTML generated using hilite.me --><div style="background: #272822; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #66d9ef">function</span> <span style="color: #a6e22e">Shoe</span><span style="color: #f8f8f2">(</span><span style="color: #a6e22e">shoeSize</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">shoeColor</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">forGender</span><span style="color: #f8f8f2">,</span> <span style="color: #a6e22e">constructStyle</span><span style="color: #f8f8f2">)</span>
+          <span style="color: #f8f8f2">{</span>
+            <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">size</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">shoeSize</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">color</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">shoeColor</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">gender</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">forGender</span><span style="color: #f8f8f2">;</span>
+            <span style="color: #66d9ef">this</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">construction</span> <span style="color: #f92672">=</span> <span style="color: #a6e22e">constructStyle</span><span style="color: #f8f8f2">;</span>
+          <span style="color: #f8f8f2">}</span>
+
+<span style="color: #a6e22e">Shoe</span><span style="color: #f8f8f2">.</span><span style="color: #a6e22e">prototype</span> <span style="color: #f92672">=</span>
+           <span style="color: #f8f8f2">{</span>
+             <span style="color: #a6e22e">putOn</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">()</span> <span style="color: #f8f8f2">{</span><span style="color: #a6e22e">alert</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Shoe&#39;s on&quot;</span><span style="color: #f8f8f2">);}</span>
+             <span style="color: #a6e22e">takeOff</span><span style="color: #f92672">:</span> <span style="color: #66d9ef">function</span><span style="color: #f8f8f2">(){</span><span style="color: #a6e22e">alert</span><span style="color: #f8f8f2">(</span><span style="color: #e6db74">&quot;Shoe&#39;s off&quot;</span><span style="color: #f8f8f2">);}</span>
+           <span style="color: #f8f8f2">}</span>
+
+<span style="color: #66d9ef">var</span> <span style="color: #a6e22e">beachShoe</span> <span style="color: #f92672">=</span> <span style="color: #66d9ef">new</span> <span style="color: #a6e22e">Shoe</span><span style="color: #f8f8f2">(</span><span style="color: #ae81ff">10</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;blue&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;women&quot;</span><span style="color: #f8f8f2">,</span><span style="color: #e6db74">&quot;flipflop&quot;</span><span style="color: #f8f8f2">);</span>
+</pre></div>
+
+
+
+
+<h3>Additional Notes:</h3>
+<p><a href="../01.js/callback.html">Callback Functions</a></p>
+<p><a href="../01.js/closure.html">Closure Concepts</a></p>
+<p><a href="../01.js/objects.html">Objects</a></p>
+          <h3>Reference Material</h3>
+          <ul>
+            <li>http://www.impressivewebs.com/javascript-string-methods-reference/</li>
+            <li>http://dailyjs.com/</li>
+          </ul>
+
+
+
+
+
+
+      </section>
+      <div class="footer">
+
+      </div>
+    </div>
+  </body>
+</html>
