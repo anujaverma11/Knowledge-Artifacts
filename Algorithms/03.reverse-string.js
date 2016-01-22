@@ -19,5 +19,4 @@ function reverse (str) {
     }
 }
 
-
 reverse('anuja');
