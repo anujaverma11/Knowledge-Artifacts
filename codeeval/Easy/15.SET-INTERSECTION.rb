@@ -12,17 +12,23 @@
 # 4
 
 # 8,9
+# File.open(ARGV[0]).each_line do |line|
+#     line = line.split(";")
+#     array1 = line[0].split(",")
+#     array2 = line[1].split(",")
+#     common = (array1 & array2).map{|s| s.to_i}
+#     if common.length == 0
+#         puts '-'
+#     else
+#         common = common.sort!
+#         puts common.join(",")
+#     end
+# end
+
 File.open(ARGV[0]).each_line do |line|
-    line = line.split(";")
-    array1 = line[0].split(",")
-    array2 = line[1].split(",")
-    common = (array1 & array2).map{|s| s.to_i}
-    if common.length == 0
-        puts '-'
-    else
-        common = common.sort!
-        puts common.join(",")
-    end
+    line = line.split(';');
+    set = line.map { |nums| nums.split(',').map(&:to_i) }
+    puts set.inject(:&).join(',') if set.size == 2
 end
 
 
