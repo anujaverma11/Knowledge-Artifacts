@@ -9,3 +9,21 @@
 // Eg:
 // input: “abcde”, “cdf”
 // Output: “cd”
+
+
+var string1='abcde';
+string1=string1.split("");
+
+var string2='cdf';
+string2=string2.split("");
+var common = [];
+for(var i=0;i<string1.length;i++){
+    for(var j=0;j<string2.length;j++){
+        if(string1[i]===string2[j]){
+            common.push(string1[i]);
+
+        }
+    }
+}
+common = common.join('');
+console.log(common);

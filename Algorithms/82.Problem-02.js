@@ -7,3 +7,16 @@
 // Eg.
 // [1,2,3,4,1] => true
 // [1,2,3,4] => false
+
+
+var arrOfInts = [1,2,3,4];
+var duplicateExists = false;
+
+for(var i=0;i<arrOfInts.length;i++){
+    for(j=0;j<arrOfInts.length;j++){
+        if(i!==j && arrOfInts[i]===arrOfInts[j]){
+        duplicateExists = true;
+        }
+    }
+}
+console.log(duplicateExists);
