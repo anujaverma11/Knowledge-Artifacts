@@ -1,3 +1,4 @@
+/*
 Problem 2:
 Find the maximum depth or height of a tree (where a tree with only a root node has a max depth/height of 0).  You may assume the tree is not empty.
 
@@ -29,3 +30,4 @@ tree =              1
         5
 
 maxDepth(Tree) => 3
+*/

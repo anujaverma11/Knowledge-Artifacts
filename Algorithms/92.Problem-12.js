@@ -1,3 +1,4 @@
+/*
 Challenge 1:
 Given an array A consisting of N different integers where those integers are in the range [1..(N + 1)], find the missing element.
 
@@ -15,3 +16,5 @@ Output: 4
 
 Input: A = [6,2,7,1,4,5]
 Output: 3
+
+*/

@@ -1,3 +1,4 @@
+/*
 Problem 1:
 Compare two binary trees to see if they are identical.  Assume your tree has the following properties:
 tree.size => returns the size (depth) of the tree; root is considered 0
@@ -45,3 +46,4 @@ tree2 =        9
 
 
 treeCompare(tree1, tree2) => false
+*/

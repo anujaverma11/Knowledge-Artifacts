@@ -1,3 +1,4 @@
+/*
 Problem 3:
 Given an array with n objects colored red, white or blue, sort them so that objects of the same color are adjacent, with the colors in the order red, white and blue.
 
@@ -12,4 +13,4 @@ Output: [0,0,0,1,1,2,2]
 
 Input: [1,2,0,0,1,2]
 Output: [0,0,1,1,2,2]
-
+*/
