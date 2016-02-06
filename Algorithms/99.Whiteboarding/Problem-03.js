@@ -9,9 +9,10 @@
 // "race a car" is not a palindrome.
 // var string = "A man, a plan, a canal: Panama";
 
-var string = "race a car";
+var string = "an u na";
 
 string = string.replace(/\W/g,'').toUpperCase();
+console.log(string);
 string = string.split("");
 var midString = parseInt(string.length/2);
 var palindrome = true;
@@ -24,4 +25,7 @@ for(var i=0;i<=midString;i++){
 }
 if (palindrome===true){
     console.log("Its a Palindrome!!!");
+}
+else{
+    console.log("No!!! No!!! No!!!");
 }
