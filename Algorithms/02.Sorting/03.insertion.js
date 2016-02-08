@@ -14,3 +14,23 @@
   *  What are the time and auxilliary space complexity?                *
   *                                                                    *
   **********************************************************************/
+
+var insertionSort = function(work){
+
+  var compareAndShift = function(indexToCompare){
+    while (indexToCompare > 0 && work[indexToCompare] < work[indexToCompare-1]){
+      var temp = work[indexToCompare];
+      work[indexToCompare] = work[indexToCompare-1];
+      work[indexToCompare-1] = temp;
+      indexToCompare--;
+    }
+  }
+
+  for (var i = 0; i < work.length; i++){
+    compareAndShift(i);
+  }
+
+  return work;
+}
+
+// insertionSort([5, 4, 3, 2, 1, 1, 1]);
