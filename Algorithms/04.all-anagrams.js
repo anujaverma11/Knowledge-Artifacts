@@ -12,3 +12,30 @@
  *
  **/
 
+ str = "b";
+console.log(str.slice(0, 2) + str.slice(2 + 1));
+console.log("=====");
+
+        var allAnagrams = function(string) {
+
+          var uniqueOutput = {};
+
+          (function anagram(ana, str) {
+            if (str === '') {
+              uniqueOutput[ana] = 1;
+            }
+            //recursive call for the length of the anagram.
+            for (var i = 0; i < str.length; i++) {
+
+              anagram(ana + str[i], str.slice(0, i) + str.slice(i + 1));
+              console.log("i= "+i+" ana= "+ana+"    str= "+str);
+            }
+          })('', string);
+          console.log(uniqueOutput)
+          return Object.keys(uniqueOutput);
+        };
+
+        var anagrams = allAnagrams('abc');
+        console.log(anagrams); // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
+
+
