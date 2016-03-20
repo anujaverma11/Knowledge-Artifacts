@@ -1,6 +1,12 @@
+/*************************************************************************
+  *    Finding the least available value in the array and swaping it with*
+  *    the current position. This will be done one swap at a time.       *
+  *                                                                      *
+  *    Time Complexity: O(n^2) (Quadratic)                               *
+  *    Space Complexity: O(1) (Constant)                                 *
+  *************************************************************************/
+
  /**********************************************************
-   *             Highly Recommended Extra Credit            *
-   *                                                        *
    *  Problem: Selection Sort                               *
    *                                                        *
    *  Prompt: Given an unsorted array of numbers,           *

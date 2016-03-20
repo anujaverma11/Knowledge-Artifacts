@@ -1,6 +1,12 @@
+ /*************************************************************************
+  *    Insertion sort is a simple sorting algorithm that builds the final *
+  *     sorted array (or list) one item at a time.                        *
+  *                                                                       *
+  *    Time Complexity: O(n^2) (Quadratic)                                *
+  *    Space Complexity: O(1) (Constant)                                  *
+  *************************************************************************/
+
  /**********************************************************************
-  *                          Homework III                              *
-  *                                                                    *
   *  Problem: Insertion Sort                                           *
   *                                                                    *
   *  Prompt: Given an unsorted array of numbers,                       *

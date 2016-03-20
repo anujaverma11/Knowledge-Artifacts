@@ -1,3 +1,11 @@
+/*************************************************************************
+  *    Comparing the adjacent value and swaping as we iterate. This will *
+  *    bubble out the largest value at the end.                          *
+  *                                                                      *
+  *    Time Complexity: O(n^2) (Quadratic)
+  *    Space Complexity: O(1) (Constant)
+  *************************************************************************/
+
 arr=[6,3,9,2,7,1];
 
 function bubbleSort(arr){
