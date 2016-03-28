@@ -1,3 +1,4 @@
+
 // Implementing a Stack using Linked List
 
 // instantiation for stackNode
@@ -27,3 +28,20 @@ stack.prototype.push = function(value){
     this.listLength++;
   }
 }
+
+// Complete Pop method for stacks
+
+// // pop method for linkedList
+// stack.prototype.pop = function(value){
+//   if (this.head === null){
+//     // initializing value being inserted into an empty linkedList
+//     this.head = new listNode(value);
+//     this.tail = this.head;
+//     this.listLength++;
+//   } else {
+//     // adding a value to a linkedList of one or more items
+//     this.tail.next = new listNode(value);
+//     this.tail = this.tail.next;
+//     this.listLength++;
+//   }
+// }
