@@ -32,3 +32,77 @@ For each query, output the answer of the query. E.g.
 34
 1792
 3571*/
+
+
+var arr = [];
+for(var i = 0; i < 256; i++){
+   arr[i] = [];
+    for(var j = 0; j < 256; j++){
+        arr[i][j] = 0;
+    }
+}
+
+function setCol(cell,value){
+
+  sum = 0;
+  for(var i = 0; i < 256; i++){
+   arr[i][cell] = value;
+   sum += arr[i][cell];
+  }
+}
+function setRow(cell, value){
+
+  sum = 0;
+  for(var j = 0; j < 256; j++){
+    arr[cell][j] = value;
+    sum += arr[cell][j];
+  }
+}
+function queryCol(cell){
+  sum = 0;
+  for(var i = 0; i < 256; i++){
+   sum += arr[i][cell];
+  }
+  if (sum > 0){console.log(sum);}
+}
+function queryRow(cell){
+  sum = 0;
+  for(var j = 0; j < 256; j++){
+   sum += arr[cell][j];
+  }
+  if (sum > 0){console.log(sum);}
+}
+
+var fs  = require("fs");
+fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) {
+    if (line !== "") {
+        line = line.split(" ");
+        var operation = line[0];
+        var cell = parseInt(line[1]);
+        var value = parseInt(line[2]);
+        var sum = 0;
+
+        if (operation == 'SetCol')
+          {
+            setCol(cell, value);
+          }
+        else if (operation == 'SetRow')
+          {
+            setRow(cell, value);
+          }
+        else if (operation == 'QueryCol')
+          {
+            queryCol(cell);
+          }
+        else if (operation == 'QueryRow')
+          {
+            queryRow(cell);
+          }
+    }
+});
+
+
+
+
+
+
