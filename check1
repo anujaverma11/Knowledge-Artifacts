@@ -1,0 +1,41 @@
+var passengers = [ ["Thomas", "Meeks"],
+                   ["Gregg", "Pollack"],
+                   ["Christine", "Wong"],
+                   ["Dan", "McGaw"] ];
+
+var modifiedNames = passengers.map(function(arraycell){
+  return arraycell[0] + " " + arraycell[1];
+});
+
+console.log(modifiedNames);
+
+// var arr = [1,9,3,4,5];
+
+
+// function maximum (arr){
+//  var maxim = 0;
+
+//  function traverse(max, count){
+//    if (count === arr.length){
+//      maxim = max;
+//      return;
+//    }
+
+//    if (max < arr[count]){
+//      max=arr[count];
+//    }
+
+//    count++;
+
+//    traverse(max, count)
+//  }
+
+//  traverse(0,0);
+
+//  return maxim;
+
+// }
+
+
+
+// maximum(arr);
