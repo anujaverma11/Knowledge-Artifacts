@@ -69,4 +69,23 @@ function addCritter(container, name, type, species, length){
   container[name] = {type: type, species: species, length: length};
   }
 
+// Looping thru each property of an object
+// Enumeration with the For-in loop
+// For-in loop allows us to access each of theenumerable propertyin turn.
+// The key represents every single property that is present inside the object
+// The in keyword looks "in" the object to its right and finds each enumerable property in turn.
+// aquarium is our object
 
+for(key in aquarium){
+  console.log(key);
+}
+
+aquarium.countFish = function(){
+  var numFish = 0;
+  for(key in this){
+    if(this[key].type == 'fish'){
+      numFish++;
+    }
+  }
+  return numFish;
+}
