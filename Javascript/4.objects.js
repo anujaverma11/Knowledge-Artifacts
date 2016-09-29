@@ -1,4 +1,8 @@
+var myBox = {}; //object literal
+
 // creating an object
+
+
 
 var booksArray =["Great Expectations","The remains of the day","Peter Pan"];
 var myBox = {
@@ -10,11 +14,13 @@ var myBox = {
           contents: booksArray };
 
 // myBox.width; will print 8 as a result
+// change the value outside by sing dot operator.
 // myBox.width = 12; will change the width to 12.
 
 myBox.contents.push("On the Road") // will add a new book to the booksArray
 myBox.destination1 = "Orlando";
 myBox.destination2 = "Miami";
+myBox["volume"] // will return 480
 myBox["no. of stops"] = 2; // will add a property to the existing error.
 
 
