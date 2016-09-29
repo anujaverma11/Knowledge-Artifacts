@@ -50,20 +50,23 @@ var wantsRide = "ride3";
 
 
 // assigning the returning of function to a variable and the calling function assigned to that variable.
-var ticket = buildTicket(parkRides, fastPassQueue, wantsRide);
-ticket();
+// var ticket = buildTicket(parkRides, fastPassQueue, wantsRide);
+// ticket();
+
 
 // Immediate invocation of a function.
 buildTicket(parkRides, fastPassQueue, wantsRide)();
 
 
 function buildTicket(allRides, passRides, pick){
-  if (passRides == pick){
-    var pass=passRides.shift();
+  if (passRides[0] == pick){
+    var pass = passRides.shift(); //pop and return first index of the queue.
     return function(){alert("Quick")};
   } else {
-    if(allRides[0][0]==pick){
-      return function(){alert(ride)};
+    for (i=0;i<=allRides.length;i++){
+      if(allRides[i][0] == pick){
+        return function(){alert(ride)};
+      }
     }
   }
 }

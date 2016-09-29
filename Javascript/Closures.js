@@ -18,5 +18,17 @@ checkLocalX(); // will print 4
 // Even though testClosure has finished operating, its local variable is now bound with checkLocalX, because it is bound as a closure inside closeX.
 
 
+function buildCloveTicketMaker(transport){
+  return function(name){
+    console.log("Here is your transportation ticket via the "+ transport + ".\n" + "Welcome to the Cold Closures Cove, " + name + "!");
+  }
+}
 
+var getSubmarineTicket = buildCloveTicketMaker("Submarine");
+getSubmarineTicket("Anuja");
 
+// Will Print the following
+// Here is your transportation ticket via the Submarine.
+// Welcome to the Cold Closures Cove, Anuja!
+// => undefined
+//
